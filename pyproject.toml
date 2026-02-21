@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pylyrics"
+version = "1.0.0"
+description = "Display synced lyrics in the terminal for the currently playing song"
+requires-python = ">=3.10"
+dependencies = [
+    "dbus-python>=1.3",
+    "requests>=2.28",
+]
+
+[project.scripts]
+pylyrics = "pylyrics.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
